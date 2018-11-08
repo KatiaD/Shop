@@ -1,2 +1,3 @@
 # Shop
-git-project
+
+Training projects for ReactJS
