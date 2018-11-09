@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Button } from 'components/controls';
+import { ProductContainer } from './ProductItem.styled';
 
 const displayName = 'ProductItem';
 
@@ -11,23 +12,22 @@ const propTypes = {
   handleAddToCart: PropTypes.func.isRequired,
 };
 
-
 function Product({
-  id,
   name,
   price,
+  image,
   onAddToCart,
 }) {
   return (
     name && (
-      <div data-name={name}>
-        {id}
+      <ProductContainer data-name={name}>
+      <img src={image} /> 
         {name}
         {price}
         <Button onClick={onAddToCart} value="addToCart">
           Bye
         </Button>
-      </div>
+      </ProductContainer>
     )
   );
 }

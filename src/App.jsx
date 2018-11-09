@@ -25,7 +25,7 @@ export default function App({ title, theme }) {
       <ThemeContext.Provider value={themes[theme]}>
         <h1>{title}</h1>
         <Router>
-          <Route path="/shop" component={Redux} />
+          <Route path="/cart" component={Redux} />
         </Router>
       </ThemeContext.Provider>
     </Provider>
