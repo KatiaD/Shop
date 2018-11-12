@@ -1,4 +1,5 @@
-import ReactJS from './ReactJS';
-import Redux from './Redux';
+import Category from "./category";
+import Cart from "./cart";
+import Confirmation from "./confirmation";
 
-export { ReactJS, Redux };
+export { Category, Cart, Confirmation };

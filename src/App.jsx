@@ -1,33 +1,35 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Provider } from 'react-redux';
-import { Redux } from 'components/pages';
-import store from 'store';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React from "react";
+import PropTypes from "prop-types";
+import { Provider } from "react-redux";
+import store from "store";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
+import { Cart, Category, Confirmation } from "components/pages";
 
-import ThemeContext, * as themes from 'themes';
-
-const displayName = 'App';
+const displayName = "App";
 
 const propTypes = {
-  title: PropTypes.string,
-  theme: PropTypes.string,
+  title: PropTypes.string
 };
 
 const defaultProps = {
-  title: 'Hello, React by default!',
-  theme: 'base',
+  title: "Sports store"
 };
 
-export default function App({ title, theme }) {
+export default function App({ title }) {
   return (
     <Provider store={store}>
-      <ThemeContext.Provider value={themes[theme]}>
-        <h1>{title}</h1>
-        <Router>
-          <Route path="/cart" component={Redux} />
-        </Router>
-      </ThemeContext.Provider>
+      <BrowserRouter>
+        <Switch>
+          {/* these are good */}
+          <Route exact path="/" component={Category} />
+          <Route path="/cart" render={props => <Cart {...props} />} />
+
+          {/* <Route
+            path="/confirmation"
+            component={props => <Confirmation {...props} extra={title} />}
+          /> */}
+        </Switch>
+      </BrowserRouter>
     </Provider>
   );
 }

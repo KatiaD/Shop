@@ -1,14 +1,26 @@
-import { addToCart } from 'actions';
-import { handleActions } from 'redux-actions';
-import { Map } from 'immutable';
+import { Map, List } from "immutable";
+import { handleActions } from "redux-actions";
+import { addToCart } from "actions";
 
-export const initialCartState = Map();
+export const initialCartState = List([]);
 
-const productsInCart = handleActions(
+const cart = handleActions(
   {
-    [addToCart]: (state, action) => state.set(action.payload, 1),
+    [addToCart]: (state, action) => state.push(action.payload.id)
   },
-  initialCartState,
+  initialCartState
+);
+export const initialQuantityState = Map({});
+
+export const quantity = handleActions(
+  {
+    [addToCart]: (state, action) => {
+      const { id } = action.payload;
+      const strId = String(id);
+      return state.merge({ [id]: state.get(strId) ? state.get(strId) + 1 : 1 });
+    }
+  },
+  initialQuantityState
 );
 
-export default productsInCart;
+export default cart;

@@ -1,5 +1,3 @@
-import Button from './Button';
-import ToggleButton from './ToggleButton';
-import BuggyControl from './BuggyControl';
+import Button from "./Button";
 
-export { Button, ToggleButton, BuggyControl };
+export { Button };

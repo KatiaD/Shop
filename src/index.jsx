@@ -1,5 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from 'App';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "App";
 
-ReactDOM.render(<App title="Shop" theme="colored" />, document.getElementById('react-meet-up'));
+/* eslint-disable no-console */
+
+ReactDOM.render(<App title="Hello, React!" />, document.getElementById("react-meet-up"));

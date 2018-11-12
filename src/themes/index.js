@@ -1,9 +1,8 @@
-import React from 'react';
-import base from './base';
-import colored from './colored';
+import React from "react";
+import whiteLabel from "./whiteLabel";
 
-const ThemeContext = React.createContext(base);
+const ThemeContext = React.createContext(whiteLabel);
 
 export default ThemeContext;
 
-export { base, colored };
+export { whiteLabel };

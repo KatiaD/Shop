@@ -1,5 +1,3 @@
-import withStyle from './withStyle';
-import withToggle from './withToggle';
-import withError from './withError';
+import withStyle from "./withStyle";
 
-export { withStyle, withToggle, withError };
+export { withStyle };
