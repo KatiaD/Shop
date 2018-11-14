@@ -1,3 +1,3 @@
-import withStyle from "./withStyle";
+import withStyle from './withStyle';
 
 export { withStyle };

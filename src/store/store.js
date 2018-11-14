@@ -1,7 +1,7 @@
-import { createStore, compose, applyMiddleware } from "redux";
-import { combineReducers } from "redux-immutable";
-import { Map } from "immutable";
-import promiseMiddleware from "redux-promise-middleware";
+import { createStore, compose, applyMiddleware } from 'redux';
+import { combineReducers } from 'redux-immutable';
+import { Map } from 'immutable';
+import promiseMiddleware from 'redux-promise-middleware';
 import {
   quantity,
   initialQuantityState,
@@ -11,10 +11,10 @@ import {
   initialProductsState,
   userInfo,
   initialUserInfoState,
-  cartIcon,
-  initialCartIconState
-} from "reducers";
-import thunkMiddleware from "redux-thunk";
+  user,
+  initialUserState
+} from 'reducers';
+import thunkMiddleware from 'redux-thunk';
 
 /* eslint-disable no-underscore-dangle */
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -26,7 +26,7 @@ export const initialStoreState = Map({
   products: initialProductsState,
   cart: initialCartState,
   quantity: initialQuantityState,
-  cartIcon: initialCartIconState
+  user: initialUserState
 });
 
 const store = createStore(
@@ -34,11 +34,11 @@ const store = createStore(
     userInfo,
     products,
     cart,
-    cartIcon,
-    quantity
+    quantity,
+    user
   }),
   initialStoreState,
-  enhancer
+  enhancer,
 );
 
 export default store;

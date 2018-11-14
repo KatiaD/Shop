@@ -1,17 +1,22 @@
-import { compose, setDisplayName, withHandlers, setPropTypes } from "recompose";
-import PropTypes from "prop-types";
-import CartItem from "./CartItem";
+import {
+  compose, setDisplayName, withHandlers, setPropTypes,
+} from 'recompose';
+import PropTypes from 'prop-types';
+import CartItem from './CartItem';
+
 
 export const enhance = compose(
-  setDisplayName("ProductContainer"),
+  setDisplayName('ProductContainer'),
   setPropTypes({
     id: PropTypes.number.isRequired,
-    AddToCart: PropTypes.func.isRequired
+    minus: PropTypes.func,
+    plus: PropTypes.func,
+    control: PropTypes.bool,
   }),
   withHandlers({
-    handleRemove: ({ id, onRemove }) => () => onRemove(id),
-    handleAddToCart: ({ id, AddToCart }) => () => AddToCart(id)
-  })
+    handleMinusItem: ({ id, minus }) => () => minus(id),
+    handlePlusItem: ({ id, plus }) => () => plus(id),
+  }),
 );
 
 export default enhance(CartItem);

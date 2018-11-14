@@ -1,17 +1,23 @@
-import React from "react";
-import { Master } from "components/composables";
+import React from 'react';
+import { Master } from 'composables';
 
-import { ProductItem } from "components/widgets";
-import { ProductWrapper } from "./Category.styled";
+import { Product } from 'components/widgets';
+import { ProductWrapper } from './Category.styled';
 
-const displayName = "Category";
+const displayName = 'Category';
 
-function Category({ myProducts, handleAddToCart }) {
+function Category({
+  myProducts,
+  handleAddToCart,
+  total
+}) {
+  const totalItems = total ? total.length : 0;
+
   return (
-    <Master title="Products">
+    <Master title="Products" total={ totalItems }>
       <ProductWrapper>
         {myProducts.map(product => (
-          <ProductItem key={product.id} {...product} AddToCart={handleAddToCart} />
+          <Product key={product.id} {...product} AddToCart={handleAddToCart}/>
         ))}
       </ProductWrapper>
     </Master>

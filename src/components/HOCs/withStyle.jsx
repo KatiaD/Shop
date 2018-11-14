@@ -1,13 +1,13 @@
-import ThemeContext from "themes";
-import React from "react";
+import ThemeContext from 'themes';
+import React from 'react';
 
 function withStyle(WrappedComponent, styleCreator) {
-  const displayName = `WithStyle(${WrappedComponent.displayName || WrappedComponent.name || "Component"})`;
+  const displayName = `WithStyle(${WrappedComponent.displayName || WrappedComponent.name || 'Component'})`;
 
   function WithStyle({ style, ...rest }) {
     return (
       <ThemeContext.Consumer>
-        {theme => {
+        {(theme) => {
           const newStyle = { ...styleCreator(theme, rest), ...style };
           return <WrappedComponent style={newStyle} {...rest} />;
         }}

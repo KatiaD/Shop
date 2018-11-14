@@ -1,9 +1,5 @@
-import { createAction } from "redux-actions";
+import { createAction } from 'redux-actions';
 
-const addItemToCart = createAction("ADD_TO_CART", id => ({ id }));
-
-const addToCart = id => dispatch => dispatch(addItemToCart(id));
-
-addToCart.toString = addItemToCart.toString;
+const addToCart = createAction('ADD_TO_CART', id => ({ id }));
 
 export default addToCart;

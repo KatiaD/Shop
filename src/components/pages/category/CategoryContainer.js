@@ -1,53 +1,49 @@
-import { compose, withState, withHandlers, setDisplayName, mapProps, lifecycle } from "recompose";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
-import { addToCart, removeProduct, fetchProducts } from "actions";
-import { getProducts } from "selectors";
+import {
+  compose, withState, withHandlers, setDisplayName, mapProps, lifecycle,
+} from 'recompose';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { addToCart, fetchProducts } from 'actions';
+import { getProducts } from 'selectors';
 
-import Category from "./Category";
+import Category from './Category';
+import { getCartProducts } from '../../../selectors';
 
 export const enhance = compose(
-  setDisplayName("AboutContainer"),
+  setDisplayName('CategoryContainer'),
   connect(
     state => ({
-      myProducts: getProducts(state)
+      myProducts: getProducts(state),
+      total: getCartProducts(state),
     }),
-    dispatch =>
-      bindActionCreators(
-        {
-          dispatchAddToCart: addToCart,
-          dispatchRemoveProduct: removeProduct,
-          dispatchFetchProducts: fetchProducts
-        },
-        dispatch
-      )
+    dispatch => bindActionCreators(
+      {
+        dispatchAddToCart: addToCart,
+        dispatchFetchProducts: fetchProducts,
+      },
+      dispatch,
+    ),
   ),
-  withState("name", "setName", ""),
+  withState('name', 'setName', ''),
   withHandlers({
-    changeName: ({ setName }) => event => {
-      setName(event.currentTarget.value);
-    },
     handleFetchProducts: ({ dispatchFetchProducts }) => () => {
       dispatchFetchProducts();
     },
-    handleAddToCart: ({ dispatchAddToCart }) => id => {
+    handleAddToCart: ({ dispatchAddToCart }) => (id) => {
       dispatchAddToCart(id);
-    }
+    },
   }),
   lifecycle({
     componentDidMount() {
       this.props.handleFetchProducts();
-    }
-  }),
-  lifecycle({
-    componentDidMount() {
-      this.props.handleFetchProducts();
-    }
+    },
   }),
   mapProps(props => ({
     ...props,
-    myProducts: props.myProducts.toJS()
-  }))
+    myProducts: props.myProducts.toJS(),
+    total: props.total,
+  })),
 );
 
 export default enhance(Category);
+

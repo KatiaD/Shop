@@ -1,10 +1,17 @@
-import getProducts from "./getProducts";
-import getCartProduct from "./getProduct";
-import getProductCartCount from "./getProductCartCount";
-import getProductInCart from "./getProductInCart";
-import getCartProducts from "./getCartProducts";
-import { getTotal } from "./getCartProducts";
+import getProducts from './getProducts';
+import getCartProduct from './getProduct';
+import getCartProducts from './getCartProducts';
+import getUser from './getUser';
+import { getTotal, getTotalCount } from './getCartProducts';
 
-import getUserInfo from "./getUserInfo";
+import getUserInfo from './getUserInfo';
 
-export { getProducts, getUserInfo, getCartProduct, getCartProducts, getTotal, getProductCartCount, getProductInCart };
+export {
+  getProducts,
+  getUserInfo,
+  getCartProduct,
+  getCartProducts,
+  getTotal,
+  getTotalCount,
+  getUser
+};

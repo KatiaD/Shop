@@ -1,5 +1,13 @@
-import addToCart from "./addToCart";
-import addToCartIcon from "./addToCartIcon";
-import fetchProducts from "./fetchProducts";
+import addToCart from './addToCart';
+import addUser from './addUser';
+import fetchProducts from './fetchProducts';
+import minusItem from './minusItem';
+import plusItem from './plusItem';
 
-export { addToCart, fetchProducts, addToCartIcon };
+export {
+  addToCart,
+  addUser,
+  fetchProducts,
+  minusItem,
+  plusItem,
+};

@@ -1,5 +1,5 @@
-import { createSelector } from "reselect";
+import { createSelector } from 'reselect';
 
-const getUserInfo = createSelector(state => state.get("userInfo"), userInfo => userInfo);
+const getUserInfo = createSelector(state => state.get('userInfo'), userInfo => userInfo);
 
 export default getUserInfo;

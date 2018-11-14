@@ -1,9 +1,9 @@
-import base from "../base";
+import base from '../base';
 
 const whiteLabel = {
   ...base,
-  colorAccent: "orange",
-  colorDefault: "#aaffaa"
+  colorAccent: '#f6731c',
+  colorDefault: '#aaffaa',
 };
 
 export default whiteLabel;
