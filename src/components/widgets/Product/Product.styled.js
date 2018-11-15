@@ -6,21 +6,13 @@ export const ProductWrapper = styled.div`
 `;
 
 export const ProductContainer = styled.div`
-height: 300px;
-width: 200px;
-padding:  0 20px;
-text-align: center;
-background-color: white;
-border: 1px solid #ededf4;
-border-radius:5px;
-margin: 5px;
+ width:50%;
   img {
-    width: 200px;
-    height: 200px;
+    width: 280px;
     padding: 10px;
-
   }
 `;
+
 export const Price = styled.div`
   background: #fef2b8;
   border-radius: 4px;

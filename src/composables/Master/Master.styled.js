@@ -6,7 +6,7 @@ export const CartContainer = styled.div`
   display:flex;
   flex-direction: column;
   margin: 0 auto;
-  background-color:#ededf4;
+  background-color: white;
 `;
 
 export const CartMainContainer = styled.div`

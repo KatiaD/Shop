@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const FooterWrapper = styled.footer`
   flex: 0 0 auto;
-  background-color: #f6731c;
+  background-color: black;
   padding: 10px;
   color:white;
-  font: 400 16px/16px Ubuntu,sans-serif;
+  font: 400 12px/12px Ubuntu,sans-serif;
   text-align:center;
 `;

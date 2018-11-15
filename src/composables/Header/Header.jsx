@@ -10,7 +10,7 @@ function Header({title, total}) {
   return (
     <HeaderWrapper>
       <HeaderTitle>
-        Sports Store - {title}
+        Watches Store - {title}
         <CartWrapper>
         {
           (title == 'Products') && 

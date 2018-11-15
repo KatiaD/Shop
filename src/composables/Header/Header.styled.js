@@ -2,32 +2,33 @@ import styled from 'styled-components';
 
 export const HeaderWrapper = styled.header`
   flex: 0 0 auto;
-  padding: 20px;
-  background-color: #687685;
+  background-color: black;
 `;
 
 export const HeaderTitle = styled.h1`
-  font-size: 30px;
+  font-size: 14px;
   color: white;
-  font: 400 21px/21px Ubuntu,sans-serif;
+  font-family: arial;
+  font-weight: normal;
+  text-transform: uppercase;
 `;
 
 export const Cart = styled.img`
-  width: 25px;
+  width: 14px;
 `;
 
 export const CartWrapper = styled.div`
-position: absolute;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  top: 33px;
-  right: 15px;
+  top: 10px;
+  right: 20px;
   width: 60px;
 `;
 
 export const Total = styled.div`
   color: white;
   float: right;
-  margin: 2px;
+  font-size: 10px;
 `;
