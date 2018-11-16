@@ -16,7 +16,7 @@ function Product({ name, image, price, handleAddToCart}) {
         <img src={image} />
         <Name>{name}</Name>
         <Price>{price}$</Price>
-        <Button name='sdfdfasd' onClick={handleAddToCart}>
+        <Button name='buy' onClick={handleAddToCart}>
           Buy
         </Button>
       </ProductContainer>
