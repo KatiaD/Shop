@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import store from 'store';
+import { whiteLabel } from 'themes';
+import { ThemeProvider } from 'styled-components';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import { Cart, Category, Confirmation } from 'components/pages';
 
@@ -18,6 +20,7 @@ const defaultProps = {
 export default function App({ title }) {
   return (
     <Provider store={store}>
+    <ThemeProvider theme={whiteLabel}>
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Category} />
@@ -32,6 +35,7 @@ export default function App({ title }) {
           />
         </Switch>
       </BrowserRouter>
+      </ThemeProvider>
     </Provider>
 
   );
