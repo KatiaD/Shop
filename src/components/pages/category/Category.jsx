@@ -1,7 +1,7 @@
 import React from 'react';
 import { Master } from 'composables';
 
-import { Product } from 'components/widgets';
+import { ProductItem } from 'components/widgets';
 import { ProductWrapper } from './Category.styled';
 
 const displayName = 'Category';
@@ -17,7 +17,7 @@ function Category({
     <Master title="Products" total={ totalItems }>
       <ProductWrapper>
         {myProducts.map(product => (
-          <Product key={product.id} {...product} AddToCart={handleAddToCart}/>
+          <ProductItem key={product.id} {...product} AddToCart={handleAddToCart}/>
         ))}
       </ProductWrapper>
     </Master>

@@ -5,7 +5,7 @@ export const ProductWrapper = styled.div`
   justify-content: space-around;
 `;
 
-export const ProductContainer = styled.div`
+export const ProductItemContainer = styled.div`
  width:25%;
   img {
     width: 280px;

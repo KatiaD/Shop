@@ -2,10 +2,10 @@ import {
   compose, setDisplayName, withHandlers, setPropTypes,
 } from 'recompose';
 import PropTypes from 'prop-types';
-import Product from './Product';
+import ProductItem from './ProductItem';
 
 export const enhance = compose(
-  setDisplayName('ProductContainer'),
+  setDisplayName('ProductItemContainer'),
   setPropTypes({
     id: PropTypes.number.isRequired,
     AddToCart: PropTypes.func.isRequired,
@@ -15,4 +15,4 @@ export const enhance = compose(
   }),
 );
 
-export default enhance(Product);
+export default enhance(ProductItem);
