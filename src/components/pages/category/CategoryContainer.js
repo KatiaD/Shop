@@ -4,10 +4,10 @@ import {
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { addToCart, fetchProducts } from 'actions';
-import { getProducts } from 'selectors';
+import { getProducts, getCartProducts } from 'selectors';
 
 import Category from './Category';
-import { getCartProducts } from '../../../selectors';
+
 
 export const enhance = compose(
   setDisplayName('CategoryContainer'),
@@ -41,9 +41,8 @@ export const enhance = compose(
   mapProps(props => ({
     ...props,
     myProducts: props.myProducts.toJS(),
-    total: props.total,
+    total: props.total.toJS(),
   })),
 );
 
 export default enhance(Category);
-

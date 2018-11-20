@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'components/controls';
-
-import { CartContainer, Price, Name } from './CartItem.styled';
+import { CartItemRow, CartItemCol, QuantityContainer } from './CartItem.styled';
 
 const displayName = 'CartItem';
 
 const propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 function CartItem({
@@ -18,27 +17,30 @@ function CartItem({
   price,
   handlePlusItem,
   handleMinusItem,
-  controls
+  controls,
 }) {
   return (
     id && (
-      <CartContainer data-name={id} key={id}>
-        <img src={image} />
-        <Name>{name}</Name>
-        <Price>{price}$</Price>
-        <div>
+      <CartItemRow data-name={id} key={id}>
+
+        <CartItemCol><img src={image} alt="" /></CartItemCol>
+        <CartItemCol>{name}</CartItemCol>
+        <CartItemCol>{price}</CartItemCol>
+        <CartItemCol>
           {
-            controls ?
+            controls ? (
               <div>
                 <Button onClick={handleMinusItem}>-</Button>
-                {quantity}
+                <QuantityContainer>{quantity}</QuantityContainer>
                 <Button onClick={handlePlusItem}>+</Button>
               </div>
-              : quantity
+            ) : quantity
           }
-        </div>
-        <Price>{price * quantity}$</Price>
-      </CartContainer>
+        </CartItemCol>
+        <CartItemCol>
+          {price * quantity}
+        </CartItemCol>
+      </CartItemRow>
     )
   );
 }

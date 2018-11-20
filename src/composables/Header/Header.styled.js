@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const HeaderWrapper = styled.header`
   flex: 0 0 auto;
   background-color: black;
+  padding-left: 80px;
 `;
 
 export const HeaderTitle = styled.h1`

@@ -8,3 +8,4 @@ const whiteLabel = {
 };
 
 export default whiteLabel;
+

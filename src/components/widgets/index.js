@@ -1,4 +1,4 @@
-import ProductItem from './ProductItem';
+import Product from './Product';
 import CartItem from './CartItem';
-
-export { ProductItem, CartItem };
+/* eslint-disable import/prefer-default-export */
+export { Product, CartItem };

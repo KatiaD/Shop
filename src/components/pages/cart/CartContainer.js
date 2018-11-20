@@ -1,17 +1,14 @@
+import {
+  compose, withState, withHandlers, setDisplayName, mapProps,
+} from 'recompose';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router';
-import {
-  compose,
-  withState,
-  withHandlers,
-  setDisplayName,
-  mapProps,
-} from 'recompose';
-
 import { plusItem, minusItem, addUser } from 'actions';
 import { getCartProducts, getTotal, getUser } from 'selectors';
+
 import Cart from './Cart';
+import getQuantity from '../../../selectors/getQuantity';
 
 export const enhance = compose(
   withRouter,
@@ -20,24 +17,26 @@ export const enhance = compose(
     state => ({
       myProducts: getCartProducts(state),
       total: getTotal(state),
-      user: getUser(state)
+      quantity: getQuantity(state),
+      user: getUser(state),
     }),
     dispatch => bindActionCreators(
       {
         dispatchAddUser: addUser,
         dispatchPlusItem: plusItem,
         dispatchMinusItem: minusItem,
+
       },
       dispatch,
     ),
   ),
   withState('user', 'setUser', ({ user }) => user),
   withHandlers({
-    handlePlusItem: ({ id, dispatchPlusItem }) => (id) => dispatchPlusItem(id),
-    handleMinusItem: ({ id, dispatchMinusItem }) => (id) => dispatchMinusItem(id),
+    handlePlusItem: ({ dispatchPlusItem }) => id => dispatchPlusItem(id),
+    handleMinusItem: ({ dispatchMinusItem }) => id => dispatchMinusItem(id),
     handleSetUser: ({ setUser, user }) => (e) => {
       const { name, value } = e.target;
-      setUser({ ...user, [name]: value })
+      setUser({ ...user, [name]: value });
     },
     handleSubmit: ({ user, dispatchAddUser, history }) => () => {
       history.push('/confirmation');
@@ -46,10 +45,11 @@ export const enhance = compose(
   }),
   mapProps(props => ({
     ...props,
-    myProducts: props.myProducts,
+    myProducts: props.myProducts.toJS(),
     total: props.total,
     history: props.history,
-    user: props.user
+    user: props.user,
+    quantity: props.quantity.toJS(),
   })),
 );
 

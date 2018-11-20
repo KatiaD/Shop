@@ -1,19 +1,18 @@
-import cart, { initialCartState } from './cart';
+// import products, { initialProductsState } from './products';
+import cart, { initialCartState, initialQuantityState, quantity } from './cart';
 import products, { initialProductsState } from './products';
-import quantity, { initialQuantityState } from './quantity';
-import user, { initialUserState } from './user';
 import userInfo, { initialUserInfoState } from './userInfo';
+import user, { initialUserState } from './user';
 
 export {
-  cart,
-  initialCartState,
   products,
   initialProductsState,
-  quantity,
   initialQuantityState,
-  user,
-  initialUserState,
+  quantity,
+  cart,
+  initialCartState,
   userInfo,
   initialUserInfoState,
-  
+  user,
+  initialUserState
 };

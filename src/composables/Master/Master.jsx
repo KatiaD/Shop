@@ -2,30 +2,42 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Header from 'composables/Header';
+
 import Footer from 'composables/Footer';
-import {
-  CartContainer,
-  CartMainContainer
-} from './Master.styled';
+
+import { CartMainContainer, CartContainer, MasterWrapper } from './Master.styled';
 
 const displayName = 'Master';
+
 const propTypes = {
   title: PropTypes.string.isRequired,
   total: PropTypes.number,
-  children: PropTypes.element
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
-function Master({ title, total, children }) {
+const defaultProps = {
+
+};
+
+function Master({ children, total, title }) {
   return (
-    <CartContainer>
+    <MasterWrapper>
       <Header title={title} total={total} />
-      <CartMainContainer>{children}</CartMainContainer>
+      <CartMainContainer>
+        <CartContainer>
+          {children}
+        </CartContainer>
+      </CartMainContainer>
       <Footer />
-    </CartContainer>
+    </MasterWrapper>
   );
 }
 
 Master.displayName = displayName;
 Master.propTypes = propTypes;
+Master.defaultProps = defaultProps;
 
 export default Master;

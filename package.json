@@ -18,7 +18,8 @@
     "start": "npm-run-all --parallel start:mockserver start:app",
     "start:mockserver": "node mockServer.js",
     "start:app": "webpack-dev-server --mode development",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.18.0",
