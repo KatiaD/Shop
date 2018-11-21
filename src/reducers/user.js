@@ -6,7 +6,7 @@ export const initialUserState = Map({ name: '', address: '' });
 
 const user = handleActions(
   {
-    [addUser]: (state, { payload }) => payload,
+    [addUser]: ({ payload }) => payload,
   },
   initialUserState,
 );
