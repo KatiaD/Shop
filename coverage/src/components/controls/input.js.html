@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">20% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/10</span>
+        <span class='fraction'>1/5</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/5</span>
+        <span class='fraction'>0/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">20% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/6</span>
+        <span class='fraction'>1/5</span>
       </div>
     </div>
   </div>
@@ -76,25 +76,20 @@
 31
 32
 33
-34</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+34</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -109,20 +104,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import styled from 'styled-components';</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import styled from 'styled-components';
 &nbsp;
-const Input = <span class="cstat-no" title="statement not covered" >styled.input.attrs({</span>
+const Input = styled.input.attrs({
   type: 'input',
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  'data-name': <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >props =&gt; props.name</span></span></span></span>
+  'data-name': <span class="fstat-no" title="function not covered" >pr</span>ops =&gt; <span class="cstat-no" title="statement not covered" >props.name</span>
 })`
-  color: ${ <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >({theme: {colorDefault}}) =&gt; colorDefault };</span></span></span>
-  font-size: ${ <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >({theme: {fontSize}}) =&gt; fontSize + 'px' };</span></span></span>
+  color: ${ <span class="fstat-no" title="function not covered" >({</span>theme: {colorDefault}}) =&gt; <span class="cstat-no" title="statement not covered" >colorDefault </span>};
+  font-size: ${ <span class="fstat-no" title="function not covered" >({</span>theme: {fontSize}}) =&gt; <span class="cstat-no" title="statement not covered" >fontSize + 'px' </span>};
   margin-top: 25px;
   height: 30px;
   width: 360px;
   background: none;
   border: none;
-  border-bottom: 1px solid  ${ <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >({theme: {colorDefault}}) =&gt; colorDefault };</span></span></span>
+  border-bottom: 1px solid  ${ <span class="fstat-no" title="function not covered" >({</span>theme: {colorDefault}}) =&gt; <span class="cstat-no" title="statement not covered" >colorDefault </span>};
   font-size: 18px;
   transition: line-height 0.5s ease;
   @media (max-width: 414px) {
@@ -148,7 +148,7 @@ export default Input;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Nov 21 2018 17:53:35 GMT+0200 (EET)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Nov 22 2018 18:46:49 GMT+0200 (EET)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
