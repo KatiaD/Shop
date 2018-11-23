@@ -51,6 +51,7 @@ function Confirmation({
         'Cart is empty'
       )}
       {total ? `TOTAL: ${total}` : <Link to="/">Back to catalog</Link>}
+      {console.log(user)}
       <div>
         Name:
         {' '}

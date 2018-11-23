@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">60% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/20</span>
+        <span class='fraction'>6/10</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">57.14% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/11</span>
+        <span class='fraction'>4/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">60% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/16</span>
+        <span class='fraction'>6/10</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -91,25 +91,7 @@
 46
 47
 48
-49</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+49</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -119,16 +101,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -139,25 +125,47 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import {</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {
   compose, withState, withHandlers, setDisplayName, mapProps, lifecycle,
 } from 'recompose';
-<span class="cstat-no" title="statement not covered" >import { bindActionCreators } from 'redux';</span>
-<span class="cstat-no" title="statement not covered" >import { connect } from 'react-redux';</span>
-<span class="cstat-no" title="statement not covered" >import { addToCart, fetchProducts } from 'actions';</span>
-<span class="cstat-no" title="statement not covered" >import { getProducts, getCartProducts } from 'selectors';</span>
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { addToCart, fetchProducts } from 'actions';
+import { getProducts, getCartProducts } from 'selectors';
 &nbsp;
-<span class="cstat-no" title="statement not covered" >import Category from './Category';</span>
+import Category from './Category';
 &nbsp;
+export const handlers = {
+  handleFetchProducts: ({ dispatchFetchProducts }) =&gt; () =&gt; {
+    dispatchFetchProducts();
+  },
+  handleAddToCart: ({ dispatchAddToCart }) =&gt; (id) =&gt; {
+    dispatchAddToCart(id);
+  },
+}
 &nbsp;
-export const <span class="cstat-no" title="statement not covered" >enhance = compose(</span>
+export const enhance = compose(
   setDisplayName('CategoryContainer'),
   connect(
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    state =&gt; ({</span></span>
+<span class="fstat-no" title="function not covered" >    st</span>ate =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
       myProducts: getProducts(state),
       total: getCartProducts(state),
     }),
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    dispatch =&gt; bindActionCreators(</span></span>
+<span class="fstat-no" title="function not covered" >    di</span>spatch =&gt; <span class="cstat-no" title="statement not covered" >bindActionCreators(</span>
       {
         dispatchAddToCart: addToCart,
         dispatchFetchProducts: fetchProducts,
@@ -165,21 +173,13 @@ export const <span class="cstat-no" title="statement not covered" >enhance = com
       dispatch,
     ),
   ),
-  withState('name', 'setName', ''),
-  withHandlers({
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    handleFetchProducts: <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >({ dispatchFetchProducts }) =&gt; <span class="fstat-no" title="function not covered" >() =&gt; </span>{</span></span></span></span></span>
-<span class="cstat-no" title="statement not covered" >      dispatchFetchProducts();</span>
-    },
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    handleAddToCart: <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >({ dispatchAddToCart }) =&gt; <span class="fstat-no" title="function not covered" >(</span>id) =&gt; {</span></span></span></span></span>
-<span class="cstat-no" title="statement not covered" >      dispatchAddToCart(id);</span>
-    },
-  }),
-  lifecycle(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" >{</span></span></span>
+  withHandlers(handlers),
+  lifecycle({
     componentDidMount() {
 <span class="cstat-no" title="statement not covered" >      this.props.handleFetchProducts();</span>
     },
   }),
-  mapProps(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >props =&gt; ({</span></span>
+  mapProps(<span class="fstat-no" title="function not covered" >pr</span>ops =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
     ...props,
     myProducts: props.myProducts.toJS(),
     total: props.total.toJS(),
@@ -193,7 +193,7 @@ export default enhance(Category);
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Nov 22 2018 18:46:49 GMT+0200 (EET)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Nov 23 2018 20:40:31 GMT+0200 (EET)
 </div>
 </div>
 <script src="../../../../prettify.js"></script>

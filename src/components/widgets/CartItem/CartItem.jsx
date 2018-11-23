@@ -22,7 +22,6 @@ function CartItem({
   return (
     id && (
       <CartItemRow data-name={id} key={id}>
-
         <CartItemCol><img src={image} alt="" /></CartItemCol>
         <CartItemCol>{name}</CartItemCol>
         <CartItemCol>{price}</CartItemCol>

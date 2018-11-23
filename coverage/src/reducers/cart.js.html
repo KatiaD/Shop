@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">21.05% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/22</span>
+        <span class='fraction'>4/19</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>0/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">21.05% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/22</span>
+        <span class='fraction'>4/19</span>
       </div>
     </div>
   </div>
@@ -89,41 +89,23 @@
 44
 45
 46
-47</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+47</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -131,34 +113,52 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { Map, List } from 'immutable';</span>
-<span class="cstat-no" title="statement not covered" >import { handleActions } from 'redux-actions';</span>
-<span class="cstat-no" title="statement not covered" >import { addToCart, minusItem, plusItem } from 'actions';</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Map, List } from 'immutable';
+import { handleActions } from 'redux-actions';
+import { addToCart, minusItem, plusItem } from 'actions';
 &nbsp;
-export const <span class="cstat-no" title="statement not covered" >initialCartState = List([]);</span>
+export const initialCartState = List([]);
 &nbsp;
-const cart = <span class="cstat-no" title="statement not covered" >handleActions(</span>
+const cart = handleActions(
   {
-    [addToCart]: <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span>state, action) =&gt; (state.indexOf(action.payload.id) === -1 ? state.push(action.payload.id) : state),</span>
+    [addToCart]: <span class="fstat-no" title="function not covered" >(s</span>tate, action) =&gt; (<span class="cstat-no" title="statement not covered" >state.indexOf(action.payload.id) === -1 ? state.push(action.payload.id) : state)</span>,
 &nbsp;
   },
   initialCartState,
 );
-export const <span class="cstat-no" title="statement not covered" >initialQuantityState = Map({});</span>
+export const initialQuantityState = Map({});
 &nbsp;
 &nbsp;
-export const <span class="cstat-no" title="statement not covered" >quantity = handleActions(</span>
+export const quantity = handleActions(
   {
-    [addToCart]: <span class="fstat-no" title="function not covered" >(</span>state, action) =&gt; {
+    [addToCart]: <span class="fstat-no" title="function not covered" >(s</span>tate, action) =&gt; {
       const { id } = <span class="cstat-no" title="statement not covered" >action.payload;</span>
       const strId = <span class="cstat-no" title="statement not covered" >String(id);</span>
 <span class="cstat-no" title="statement not covered" >      return state.merge({ [id]: state.get(strId) ? state.get(strId) + 1 : 1 });</span>
     },
-    [minusItem]: <span class="fstat-no" title="function not covered" >(</span>state, action) =&gt; {
+    [minusItem]: <span class="fstat-no" title="function not covered" >(s</span>tate, action) =&gt; {
       const { id } = <span class="cstat-no" title="statement not covered" >action.payload;</span>
       const strId = <span class="cstat-no" title="statement not covered" >String(id);</span>
       let value = <span class="cstat-no" title="statement not covered" >1;</span>
@@ -171,7 +171,7 @@ export const <span class="cstat-no" title="statement not covered" >quantity = ha
       }
 <span class="cstat-no" title="statement not covered" >      return state.merge({ [id]: value });</span>
     },
-    [plusItem]: <span class="fstat-no" title="function not covered" >(</span>state, action) =&gt; {
+    [plusItem]: <span class="fstat-no" title="function not covered" >(s</span>tate, action) =&gt; {
       const { id } = <span class="cstat-no" title="statement not covered" >action.payload;</span>
       const strId = <span class="cstat-no" title="statement not covered" >String(id);</span>
 <span class="cstat-no" title="statement not covered" >      return state.merge({ [id]: state.get(strId) ? state.get(strId) + 1 : 1 });</span>
@@ -187,7 +187,7 @@ export default cart;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Nov 22 2018 18:46:49 GMT+0200 (EET)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Nov 23 2018 20:40:31 GMT+0200 (EET)
 </div>
 </div>
 <script src="../../prettify.js"></script>
