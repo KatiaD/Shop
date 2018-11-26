@@ -87,5 +87,9 @@
       "eslint --fix",
       "git add"
     ]
+  },
+  "jestWebpackResolver": {
+    "silent": true,
+    "webpackConfig": "./webpack.config.js"
   }
 }
