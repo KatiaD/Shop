@@ -8,7 +8,6 @@ import {
 
 import Confirmation from './Confirmation';
 
-
 export const enhance = compose(
   setDisplayName('ConfirmationContainer'),
   connect(

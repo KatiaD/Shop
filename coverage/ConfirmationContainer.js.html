@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/components/widgets/ProductItem/ProductItem.styled.js</title>
+    <title>Code coverage report for ConfirmationContainer.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../../../prettify.css" />
-    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../../../sort-arrow-sprite.png);
+            background-image: url(sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../../index.html">All files</a> / <a href="index.html">src/components/widgets/ProductItem</a> ProductItem.styled.js
+      <a href="index.html">All files</a> ConfirmationContainer.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>3/3</span>
       </div>
     </div>
   </div>
@@ -72,16 +72,7 @@
 27
 28
 29
-30
-31
-32</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+30</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -91,61 +82,64 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import styled from 'styled-components';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {
+  compose, setDisplayName, mapProps,
+} from 'recompose';
+import { connect } from 'react-redux';
+import {
+  getTotal, getQuantity, getCartProducts, getUser,
+} from 'selectors';
 &nbsp;
-export const ProductWrapper = styled.div`
-  display: flex;
-  justify-content: space-around;
-`;
+import Confirmation from './Confirmation';
 &nbsp;
-export const ProductContainer = styled.div`
-  flex: 0 0 auto;
-  width: 250px;
-  position: relative;
-  padding: 18px;
-  border: 1px solid #e1e7ec;
-  border-radius: 7px;
-  background-color: #fff;
-  margin: 20px 0;
-  img {
-    width: 100%;
-  }
-`;
-export const ProductName = styled.div`
-  font-family: 'Poppins', sans-serif;
-`;
+export const enhance = compose(
+  setDisplayName('ConfirmationContainer'),
+  connect(
+    state =&gt; ({
+      myProducts: getCartProducts(state),
+      user: getUser(state),
+      quantity: getQuantity(state),
+      total: getTotal(state),
+    }),
+  ),
+  mapProps(props =&gt; ({
+    ...props,
+    myProducts: props.myProducts.toJS(),
+    user: props.user.toJS(),
+    quantity: props.quantity.toJS(),
+  })),
+);
 &nbsp;
-export const ProductPrice = styled.div`
-&nbsp;
-`;
-export const ProductPriceBlock = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
+export default enhance(Confirmation);
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Nov 26 2018 17:32:25 GMT+0200 (EET)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Nov 26 2018 17:58:40 GMT+0200 (EET)
 </div>
 </div>
-<script src="../../../../prettify.js"></script>
+<script src="prettify.js"></script>
 <script>
 window.onload = function () {
         if (typeof prettyPrint === 'function') {
@@ -153,6 +147,6 @@ window.onload = function () {
         }
 };
 </script>
-<script src="../../../../sorter.js"></script>
+<script src="sorter.js"></script>
 </body>
 </html>
