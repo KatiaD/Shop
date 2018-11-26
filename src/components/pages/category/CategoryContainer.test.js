@@ -4,10 +4,17 @@ import { mount } from 'enzyme';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 import { createSink } from 'recompose';
-import { getProducts, getCartProducts } from 'selectors';
+import { MemoryRouter } from 'react-router-dom';
+import thunkMiddleware from 'redux-thunk';
+
+import {
+    getProducts,
+    getCartProducts
+} from 'selectors';
+
 import { handlers, enhance } from './CategoryContainer';
- 
-const testStore = configureStore()(initialStoreState); 
+
+const testStore = configureStore([thunkMiddleware])(initialStoreState);
 
 const id = 2;
 
@@ -16,34 +23,54 @@ const testProps = {
     dispatchFetchProducts: jest.fn(),
 };
 
- describe('Given a CategoryContainer handlers', () => {
-	describe('when the handleFetchProducts is called', () => {
- 		beforeEach(() => {
-			handlers.handleFetchProducts(testProps)();
-		});
- 		it('should call the dispatchFetchProducts function', () => {
-			expect(testProps.dispatchFetchProducts).toHaveBeenCalled();
-		});
-	});
- 	describe('when the  handleAddToCart is called', () => {
-		beforeEach(() => {
-			handlers.handleAddToCart(testProps)(id);
-		});
- 		it('should call the dispatchAddToCart function', () => {
-			expect(testProps.dispatchAddToCart).toHaveBeenCalledWith(id);
-		});
-  });
+describe('Given a CategoryContainer enhancer', () => {
+
+    describe('when the handleAddToCart is called', () => {
+
+        beforeEach(() => {
+            handlers.handleAddToCart(testProps)(id);
+        });
+
+        describe('and the action is "ADD_TO_CART"', () => {
+            it('should call the addToCart with id', () => {
+                expect(testProps.dispatchAddToCart).toHaveBeenCalledWith(id);
+            });
+        });
+    });
+
+    describe('when the dispatchFetchProducts is called', () => {
+
+        beforeEach(() => {
+            handlers.handleFetchProducts(testProps)();
+        });
+
+        describe('and the action is "FETCH_PRODUCTS"', () => {
+            it('should call the fetchProducts', () => {
+                expect(testProps.dispatchFetchProducts).toHaveBeenCalled();
+            });
+        });
+    });
+    describe('when the enhancer is rendered', () => {
+        let providedProps;
+
+        beforeEach(() => {
+            const CategoryContainer = enhance(createSink(props => (providedProps = props)));
+
+            mount(
+                <MemoryRouter>
+                    <Provider store={testStore}>
+                        <CategoryContainer {...testProps} />
+                    </Provider>
+                </MemoryRouter>,
+            );
+        });
+
+        it('should provide the required props', () => {
+            expect(providedProps.dispatchAddToCart).toBeInstanceOf(Function);
+            expect(providedProps.dispatchFetchProducts).toBeInstanceOf(Function);
+            expect(providedProps.myProducts).toEqual(getProducts(testStore.getState()).toJS());
+            expect(providedProps.total).toEqual(getCartProducts(testStore.getState()).toJS());
+
+        });
+    });
 });
- describe('Given a CategoryContainer enhancer', () => {
-	describe('when the enhancer is rendered', () => {
-		let providedProps;
- 		beforeEach(() => {
-			const DummyContainer = enhance(createSink(props => (providedProps = props)));
- 			mount(
-				<Provider store={ testStore }>
-					<DummyContainer />
-				</Provider>
-			);
-		});
-}); 
- });
