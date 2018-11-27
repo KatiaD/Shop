@@ -1,6 +1,5 @@
 import getTotal from './getTotal';
 import getUser from './getUser';
-
 import getProducts from './getProducts';
 import getCartProduct from './getProduct';
 import getCartProducts from './getCartProducts';
