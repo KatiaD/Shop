@@ -13,7 +13,6 @@ const cart = handleActions(
 );
 export const initialQuantityState = Map({});
 
-
 export const quantity = handleActions(
   {
     [addToCart]: (state, action) => {
