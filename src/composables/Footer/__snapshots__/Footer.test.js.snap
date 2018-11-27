@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given the Footer component when the component is rendered should render the component with provided props 1`] = `
+<Footerstyled__FooterWrapper>
+  @Onseo-2018
+</Footerstyled__FooterWrapper>
+`;
