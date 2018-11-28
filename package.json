@@ -18,18 +18,24 @@
     "start": "npm-run-all --parallel start:mockserver start:app",
     "start:mockserver": "node mockServer.js",
     "start:app": "webpack-dev-server --mode development",
+    "start:wdio": "wdio",
     "precommit": "lint-staged",
+    "prepush": "npm run test",
+    "test-integration": "npm-run-all --parallel start start:wdio",
     "test": "jest"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "babel-jest": "^23.6.0",
+    "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-styled-components": "^1.8.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-register": "^6.26.0",
     "babel-runtime": "6.26.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "enzyme-to-json": "^3.3.4",
+    "expect": "^23.6.0",
     "identity-obj-proxy": "^3.0.0",
     "immutable": "^4.0.0-rc.12",
     "jest-webpack-resolver": "^0.3.0",
@@ -46,7 +52,12 @@
     "redux-promise-middleware": "^5.1.1",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
-    "styled-components": "^4.0.3"
+    "styled-components": "^4.0.3",
+    "wdio-jasmine-framework": "^0.3.7",
+    "wdio-screenshots-cleanup-service": "0.0.7",
+    "wdio-selenium-standalone-service": "0.0.11",
+    "wdio-spec-reporter": "^0.1.5",
+    "webdriverio": "^4.14.0"
   },
   "devDependencies": {
     "babel-core": "6.26.3",
