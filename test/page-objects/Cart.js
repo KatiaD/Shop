@@ -1,6 +1,6 @@
-class Redux {
+class Category {
   static open() {
-    browser.url('/redux');
+    browser.url('/');
   }
 
   static get buttonFetchProducts() {
@@ -20,4 +20,4 @@ class Redux {
   }
 }
 
-export default Redux;
+export default Category;

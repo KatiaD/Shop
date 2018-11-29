@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Master from 'composables';
 
-import { ProductItem  } from 'components/widgets';
+import { ProductItem } from 'components/widgets';
 import ProductWrapper from './Category.styled';
 
 const displayName = 'Category';

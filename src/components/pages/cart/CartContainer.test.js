@@ -74,7 +74,7 @@ describe('Given a CartContainer enhancer', () => {
             expect(providedProps.dispatchAddUser).toBeInstanceOf(Function);
             expect(providedProps.dispatchPlusItem).toBeInstanceOf(Function);
             expect(providedProps.dispatchMinusItem).toBeInstanceOf(Function);
-           
+
             expect(providedProps.myProducts).toEqual(getCartProducts(testStore.getState()).toJS());
             expect(providedProps.total).toEqual(getTotal(testStore.getState()));
             expect(providedProps.quantity).toEqual(getQuantity(testStore.getState()).toJS());
