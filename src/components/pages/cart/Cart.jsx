@@ -7,7 +7,6 @@ import { CartItem } from 'components/widgets';
 import { Button, Input } from 'components/controls';
 import { CartTable } from './Cart.styled';
 
-
 const displayName = 'Category';
 
 const propTypes = {

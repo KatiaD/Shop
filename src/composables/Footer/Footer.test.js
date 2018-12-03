@@ -8,7 +8,7 @@ describe('Given the Footer component', () => {
     let component;
 
     beforeEach(() => {
-      component = shallow(<Footer/>);
+      component = shallow(<Footer />);
     });
 
     it('should render the component with provided props', () => {

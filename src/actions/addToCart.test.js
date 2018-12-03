@@ -18,10 +18,10 @@ describe('Given the addToCart action', () => {
       beforeAll(() => {
         id = 1;
       });
-      
+
       it('should create a payload with the provided product id', () => {
         expect(action.payload.id).toBe(1);
       });
     });
-    });
   });
+});

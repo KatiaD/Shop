@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 const Button = styled.button.attrs({
   type: 'button',
-  'data-name': props => props.name
+  'data-name': props => props.name,
 })`
-  color: ${ ({theme: {colorAccent}}) => colorAccent };
+  color: $({theme: {colorAccent}}) => colorAccent };
   background-color: ${ ({theme: {colorDefault}}) => colorDefault };
   font-size: ${ ({theme: {fontSize}}) => fontSize + 'px' };
   width: ${ ({theme: {width}}) => width + 55 + 'px' };

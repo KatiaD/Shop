@@ -1,7 +1,7 @@
 import {
   Map,
   fromJS,
-  List
+  List,
 } from 'immutable';
 
 import getCartProducts from './getCartProducts';

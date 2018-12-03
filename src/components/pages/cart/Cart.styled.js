@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CarttWrapper = styled.div`
+export const CartWrapper = styled.div`
   display: flex;
   justify-content: space-around;
 `;

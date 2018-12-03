@@ -2,16 +2,16 @@ import styled from 'styled-components';
 
 const Input = styled.input.attrs({
   type: 'input',
-  'data-name': props => props.name
+  'data-name': props => props.name,
 })`
-  color: ${ ({theme: {colorDefault}}) => colorDefault };
-  font-size: ${ ({theme: {fontSize}}) => fontSize + 'px' };
+  color: ${({ theme: { colorDefault } }) => colorDefault};
+  font-size: ${({ theme: { fontSize } }) => fontSize + 'px'};
   margin-top: 25px;
   height: 30px;
   width: 360px;
   background: none;
   border: none;
-  border-bottom: 1px solid  ${ ({theme: {colorDefault}}) => colorDefault };
+  border-bottom: 1px solid  ${({ theme: { colorDefault } }) => colorDefault};
   font-size: 18px;
   transition: line-height 0.5s ease;
   @media (max-width: 414px) {

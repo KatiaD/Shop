@@ -19,7 +19,7 @@ describe('Given the addUser action', () => {
         user = {
           name: 'Kate',
           address: 'Kiev',
-        }
+        };
       });
       it('should create a payload equal to the provided value', () => {
         expect(action.payload.name).toBe('Kate');

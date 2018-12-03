@@ -15,7 +15,7 @@ export const handlers = {
   handleAddToCart: ({ dispatchAddToCart }) => (id) => {
     dispatchAddToCart(id);
   },
-}
+};
 
 export const enhance = compose(
   setDisplayName('CategoryContainer'),

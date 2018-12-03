@@ -8,7 +8,7 @@ describe('Given the plusItem action', () => {
     beforeEach(() => {
       action = plusItem(id);
     });
-    
+
     it('should have the PLUS_ITEM type', () => {
       expect(action.type).toBe('PLUS_ITEM');
     });
