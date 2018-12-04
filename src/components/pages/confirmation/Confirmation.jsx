@@ -21,10 +21,7 @@ const defaultProps = {
 };
 
 function Confirmation({
-  myProducts,
-  total,
-  user,
-  quantity,
+  myProducts, total, user, quantity,
 }) {
   return (
     <Master title="Confirmation">
@@ -40,25 +37,21 @@ function Confirmation({
             </tr>
           </thead>
           <tbody>
-            {
-              myProducts.map(product => (
-                <CartItem key={product.id} {...product} controls={false} quantity={quantity[product.id]} />
-              ))
-            }
+            {myProducts.map(product => (
+              <CartItem key={product.id} {...product} controls={false} quantity={quantity[product.id]} />
+            ))}
           </tbody>
         </CartTable>
       ) : (
         'Cart is empty'
       )}
       {total ? `TOTAL: ${total}` : <Link to="/">Back to catalog</Link>}
-      <div>
+      <div data-name="user-info-name">
         Name:
-        {' '}
         {user.name}
       </div>
-      <div>
+      <div data-name="user-info-address">
         Address:
-        {' '}
         {user.address}
       </div>
       <Button>Confirm</Button>

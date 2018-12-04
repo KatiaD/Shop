@@ -3,20 +3,18 @@ class Category {
     browser.url('/');
   }
 
-  static get buttonFetchProducts() {
-    return browser.element('[data-name="fetch-products"]');
-  }
+  static get findButtonAddToCart() {
+    const links = $$('button');
 
-  static get buttonAddProduct() {
-    return browser.element('[data-name="add-product"]');
-  }
-
-  static get inputNewProductName() {
-    return browser.element('[data-name="new-product-name"]');
+    return links;
   }
 
   static findProduct(name) {
     return browser.element(`[data-name="${name}"]`);
+  }
+
+  static findImageCart() {
+    return browser.element('[data-name="header-cart"]');
   }
 }
 

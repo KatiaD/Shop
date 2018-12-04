@@ -10,35 +10,32 @@ const propTypes = {
 };
 
 function CartItem({
-  name,
-  image,
-  quantity,
-  id,
-  price,
-  handlePlusItem,
-  handleMinusItem,
-  controls,
+  name, image, quantity, id, price, handlePlusItem, handleMinusItem, controls,
 }) {
   return (
     id && (
       <CartItemRow data-name={id} key={id}>
-        <CartItemCol><img src={image} alt="" /></CartItemCol>
+        <CartItemCol>
+          <img src={image} alt="" />
+        </CartItemCol>
         <CartItemCol>{name}</CartItemCol>
         <CartItemCol>{price}</CartItemCol>
         <CartItemCol>
-          {
-            controls ? (
-              <div>
-                <Button onClick={handleMinusItem}>-</Button>
-                <QuantityContainer>{quantity}</QuantityContainer>
-                <Button onClick={handlePlusItem}>+</Button>
-              </div>
-            ) : quantity
-          }
+          {controls ? (
+            <div>
+              <Button onClick={handleMinusItem} name="minus">
+                -
+              </Button>
+              <QuantityContainer>{quantity}</QuantityContainer>
+              <Button onClick={handlePlusItem} name="plus">
+                +
+              </Button>
+            </div>
+          ) : (
+            quantity
+          )}
         </CartItemCol>
-        <CartItemCol>
-          {price * quantity}
-        </CartItemCol>
+        <CartItemCol>{price * quantity}</CartItemCol>
       </CartItemRow>
     )
   );

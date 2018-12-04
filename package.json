@@ -19,8 +19,6 @@
     "start:mockserver": "node mockServer.js",
     "start:app": "webpack-dev-server --mode development",
     "start:wdio": "wdio",
-    "precommit": "lint-staged",
-    "prepush": "npm run test",
     "test-integration": "npm-run-all --parallel start start:wdio",
     "test": "jest"
   },
