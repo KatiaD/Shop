@@ -20,24 +20,23 @@ const defaultProps = {
 export default function App({ title }) {
   return (
     <Provider store={store}>
-    <ThemeProvider theme={whiteLabel}>
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={Category} />
-          <Route
-            path="/cart"
-            render={props => <Cart {...props}/>}
-          />
+      <ThemeProvider theme={whiteLabel}>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={Category} />
+            <Route
+              path="/cart"
+              render={props => <Cart {...props} />}
+            />
 
-          <Route
-            path="/confirmation"
-            component={props => <Confirmation {...props} extra={title} />}
-          />
-        </Switch>
-      </BrowserRouter>
+            <Route
+              path="/confirmation"
+              component={props => <Confirmation {...props} extra={title} />}
+            />
+          </Switch>
+        </BrowserRouter>
       </ThemeProvider>
     </Provider>
-
   );
 }
 

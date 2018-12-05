@@ -31,7 +31,6 @@ describe('Given the  reducer', () => {
         testAction.type = 'MINUS_ITEM';
         testAction.payload = { id: 1 };
       });
-      
     });
 
     describe('and the action dispatched is unknown', () => {

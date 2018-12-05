@@ -3,11 +3,10 @@ import { shallow } from 'enzyme';
 
 import Master from './Master';
 
-const testProps ={ children: '', total: 50, title: 'title' }
+const testProps = { children: '', total: 50, title: 'title' },
 
-
-describe('Given a Master component', () => {
-	describe('when the component is rendered', () => {
+describe('Given the Master component', () => {
+	describe( 'when the component is rendered', () => {
 		let component;
 
 		beforeEach(() => {
@@ -20,9 +19,6 @@ describe('Given a Master component', () => {
 
 		it('should match the snapshot', () => {
 			expect(component).toMatchSnapshot();
-		});
+    });
   });
-});  
-  
-  
-  
+});

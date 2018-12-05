@@ -11,6 +11,6 @@ export const CartMainContainer = styled.div`
 `;
 export const MasterWrapper = styled.div`
   height: 100%;
-  display:flex;
+  display: flex;
   flex-direction: column;
 `;

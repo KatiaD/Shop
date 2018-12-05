@@ -11,11 +11,8 @@ const displayName = 'Master';
 
 const propTypes = {
   title: PropTypes.string.isRequired,
-  total: PropTypes.number,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  total: PropTypes.number.isRequired,
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
 };
 
 const defaultProps = {

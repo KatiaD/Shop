@@ -3,7 +3,7 @@
 exports[`Given the Header component when the component is rendered should render the component with provided props 1`] = `
 <Headerstyled__HeaderWrapper>
   <Headerstyled__HeaderTitle>
-    Watches Store - 
+    Watches Store -
     <Headerstyled__CartWrapper />
   </Headerstyled__HeaderTitle>
 </Headerstyled__HeaderWrapper>

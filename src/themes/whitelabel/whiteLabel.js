@@ -4,8 +4,7 @@ const whiteLabel = {
   ...base,
   colorAccent: 'white',
   colorDefault: 'black',
-  fontSize: 14
+  fontSize: 14,
 };
 
 export default whiteLabel;
-

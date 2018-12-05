@@ -8,7 +8,6 @@ export const UserInfoWrap = styled.div`
   align-items: center;
 `;
 export const UserInfoForm = styled.form.attrs({
-  // we can define static props
   onSubmit: props => props.onSubmit,
 })`
   margin: 50px 0;

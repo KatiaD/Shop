@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Master from 'composables';
 import { Link } from 'react-router-dom';
 import { CartItem } from 'components/widgets';
-import { Button } from '../../controls';
 import { CartTable } from '../cart/Cart.styled';
 
 const displayName = 'Confirmation';
@@ -12,7 +11,7 @@ const propTypes = {
   myProducts: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
   total: PropTypes.number.isRequired,
   quantity: PropTypes.objectOf(PropTypes.number),
-
+  values: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
 const defaultProps = {
@@ -54,7 +53,6 @@ function Confirmation({
       <div data-name="user-info-age">
         {values.age}
       </div>
-      <Button>Confirm</Button>
     </Master>
   );
 }

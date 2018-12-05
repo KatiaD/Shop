@@ -57,15 +57,14 @@ describe('Given a CategoryContainer enhancer', () => {
             <CategoryContainer {...testProps} />
           </Provider>
         </MemoryRouter>,
-            );
-        });
-
-        it('should provide the required props', () => {
-            expect(providedProps.dispatchAddToCart).toBeInstanceOf(Function);
-            expect(providedProps.dispatchFetchProducts).toBeInstanceOf(Function);
-            expect(providedProps.myProducts).toEqual(getProducts(testStore.getState()).toJS());
-            expect(providedProps.total).toEqual(getCartProducts(testStore.getState()).toJS());
-
-        });
+      );
     });
+
+    it('should provide the required props', () => {
+      expect(providedProps.dispatchAddToCart).toBeInstanceOf(Function);
+      expect(providedProps.dispatchFetchProducts).toBeInstanceOf(Function);
+      expect(providedProps.myProducts).toEqual(getProducts(testStore.getState()).toJS());
+      expect(providedProps.total).toEqual(getCartProducts(testStore.getState()).toJS());
+    });
+  });
 });
