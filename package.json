@@ -34,6 +34,7 @@
     "enzyme-adapter-react-16": "^1.7.0",
     "enzyme-to-json": "^3.3.4",
     "expect": "^23.6.0",
+    "form": "^0.2.4",
     "identity-obj-proxy": "^3.0.0",
     "immutable": "^4.0.0-rc.12",
     "jest-webpack-resolver": "^0.3.0",

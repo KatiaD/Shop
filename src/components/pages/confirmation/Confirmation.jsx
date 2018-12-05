@@ -11,17 +11,16 @@ const displayName = 'Confirmation';
 const propTypes = {
   myProducts: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
   total: PropTypes.number.isRequired,
-  user: PropTypes.shape({ name: PropTypes.string, address: PropTypes.string }),
   quantity: PropTypes.objectOf(PropTypes.number),
+
 };
 
 const defaultProps = {
-  user: {},
   quantity: {},
 };
 
 function Confirmation({
-  myProducts, total, user, quantity,
+  myProducts, total, quantity, values,
 }) {
   return (
     <Master title="Confirmation">
@@ -47,12 +46,13 @@ function Confirmation({
       )}
       {total ? `TOTAL: ${total}` : <Link to="/">Back to catalog</Link>}
       <div data-name="user-info-name">
-        Name:
-        {user.name}
+        {values.name}
       </div>
-      <div data-name="user-info-address">
-        Address:
-        {user.address}
+      <div data-name="user-info-email">
+        {values.email}
+      </div>
+      <div data-name="user-info-age">
+        {values.age}
       </div>
       <Button>Confirm</Button>
     </Master>

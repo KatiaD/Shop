@@ -1,8 +1,15 @@
 import styled from 'styled-components';
 
 const Input = styled.input.attrs({
-  type: 'input',
   'data-name': props => props.name,
+  name: props => props.name,
+  onChange: props => props.onChange,
+  onBlur: props => props.onBlur,
+  placeholder: props => props.placeholder,
+  type: props => props.type,
+  value: props => props.value,
+  onFocus: props => props.onFocus,
+  required: props => props.required,
 })`
   color: ${({ theme: { colorDefault } }) => colorDefault};
   font-size: ${({ theme: { fontSize } }) => fontSize};

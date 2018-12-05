@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Master from 'composables';
 import { Link } from 'react-router-dom';
-
+import UserForm from 'components/widgets/UserForm';
 import { CartItem } from 'components/widgets';
-import { Button, Input } from 'components/controls';
 import { CartTable } from './Cart.styled';
+
 
 const displayName = 'Category';
 
@@ -31,8 +31,6 @@ function Cart({
   handlePlusItem,
   handleMinusItem,
   handleSubmit,
-  handleSetUser,
-  user,
   quantity,
 }) {
   return (
@@ -70,19 +68,7 @@ function Cart({
       {
         total ? (
           <div>
-            <Input
-              name="name"
-              placeholder="Type your name"
-              value={user.name ? user.name : ''}
-              onChange={handleSetUser}
-            />
-            <Input
-              name="address"
-              placeholder="Type your address"
-              value={user.address ? user.address : ''}
-              onChange={handleSetUser}
-            />
-            <Button onClick={handleSubmit}>Submit</Button>
+            <UserForm handleSubmit={handleSubmit} />
           </div>
         ) : ''
       }

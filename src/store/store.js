@@ -2,6 +2,7 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import { combineReducers } from 'redux-immutable';
 import { Map } from 'immutable';
 import promiseMiddleware from 'redux-promise-middleware';
+import { reducer as formReduxReducer } from 'redux-form/immutable';
 import {
   quantity,
   initialQuantityState,
@@ -31,6 +32,7 @@ export const initialStoreState = Map({
 
 const store = createStore(
   combineReducers({
+    form: formReduxReducer,
     userInfo,
     products,
     cart,
