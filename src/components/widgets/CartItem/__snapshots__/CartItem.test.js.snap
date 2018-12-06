@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given the CartItem component when the component is rendered with controls should render the component with provided props 1`] = `
+<CartItemstyled__CartItemRow
+  data-name={1}
+  key="1"
+>
+  <CartItemstyled__CartItemCol>
+    <img
+      alt=""
+      src=""
+    />
+  </CartItemstyled__CartItemCol>
+  <CartItemstyled__CartItemCol>
+    GUNMETAL SANDSTONE
+  </CartItemstyled__CartItemCol>
+  <CartItemstyled__CartItemCol>
+    140
+  </CartItemstyled__CartItemCol>
+  <CartItemstyled__CartItemCol>
+    <div>
+      <Button
+        name="minus"
+        onClick={[MockFunction]}
+      >
+        -
+      </Button>
+      <CartItemstyled__QuantityContainer>
+        1
+      </CartItemstyled__QuantityContainer>
+      <Button
+        name="plus"
+        onClick={[MockFunction]}
+      >
+        +
+      </Button>
+    </div>
+  </CartItemstyled__CartItemCol>
+  <CartItemstyled__CartItemCol>
+    140
+  </CartItemstyled__CartItemCol>
+</CartItemstyled__CartItemRow>
+`;
+
+exports[`Given the CartItem component when the component is rendered without controls should render the component with provided props 1`] = `
+<CartItemstyled__CartItemRow
+  data-name={1}
+  key="1"
+>
+  <CartItemstyled__CartItemCol>
+    <img
+      alt=""
+      src=""
+    />
+  </CartItemstyled__CartItemCol>
+  <CartItemstyled__CartItemCol>
+    GUNMETAL SANDSTONE
+  </CartItemstyled__CartItemCol>
+  <CartItemstyled__CartItemCol>
+    140
+  </CartItemstyled__CartItemCol>
+  <CartItemstyled__CartItemCol>
+    1
+  </CartItemstyled__CartItemCol>
+  <CartItemstyled__CartItemCol>
+    140
+  </CartItemstyled__CartItemCol>
+</CartItemstyled__CartItemRow>
+`;

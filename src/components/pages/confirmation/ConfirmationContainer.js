@@ -4,7 +4,7 @@ import {
 import { getFormValues } from 'redux-form/immutable';
 import { connect } from 'react-redux';
 import {
-  getTotal, getQuantity, getCartProducts, getUser,
+  getTotal, getQuantity, getCartProducts,
 } from 'selectors';
 
 import Confirmation from './Confirmation';
@@ -15,7 +15,6 @@ export const enhance = compose(
     state => ({
       values: getFormValues('syncValidation')(state),
       myProducts: getCartProducts(state),
-      user: getUser(state),
       quantity: getQuantity(state),
       total: getTotal(state),
     }),
@@ -23,7 +22,6 @@ export const enhance = compose(
   mapProps(props => ({
     ...props,
     myProducts: props.myProducts.toJS(),
-    user: props.user.toJS(),
     quantity: props.quantity.toJS(),
     values: props.values.toJS(),
   })),

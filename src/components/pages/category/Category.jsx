@@ -23,7 +23,6 @@ function Category({
   total,
 }) {
   const totalItems = total ? total.length : 0;
-
   return (
     <Master title="Products" total={totalItems}>
       <ProductWrapper>

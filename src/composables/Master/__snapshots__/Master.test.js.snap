@@ -3,8 +3,8 @@
 exports[`Given a Master component when the component is rendered should match the snapshot 1`] = `
 <Masterstyled__MasterWrapper>
   <Header
-    title="title"
-    total={50}
+    title="test"
+    total={500}
   />
   <Masterstyled__CartMainContainer>
     <Masterstyled__CartContainer>

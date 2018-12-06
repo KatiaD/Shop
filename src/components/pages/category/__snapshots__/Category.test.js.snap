@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a CategoryPage component when the component is rendered should match the snapshot 1`] = `
+<Master
+  title="Products"
+>
+  <Categorystyled__ProductWrapper />
+</Master>
+`;

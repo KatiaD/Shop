@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a  CartPage component when the component is rendered should match the snapshot 1`] = `
+<Master
+  title="Cart"
+  total={500}
+>
+  <Cartstyled__CartTable>
+    <thead>
+      <tr>
+        <th>
+          Image
+        </th>
+        <th>
+          Product name
+        </th>
+        <th>
+          Price
+        </th>
+        <th>
+          Quantity
+        </th>
+        <th>
+          total
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </Cartstyled__CartTable>
+  TOTAL: 500
+  <div>
+    <ReduxForm />
+  </div>
+</Master>
+`;

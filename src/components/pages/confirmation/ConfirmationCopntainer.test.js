@@ -7,12 +7,12 @@ import { createSink } from 'recompose';
 import { MemoryRouter } from 'react-router-dom';
 import thunkMiddleware from 'redux-thunk';
 import { getFormValues } from 'redux-form/immutable';
+import { Map, List } from 'immutable';
 
 import {
   getTotal,
   getQuantity,
   getCartProducts,
-  getUser,
 } from 'selectors';
 
 import { enhance } from './ConfirmationContainer';
@@ -20,8 +20,7 @@ import { enhance } from './ConfirmationContainer';
 const testStore = configureStore([thunkMiddleware])(initialStoreState);
 
 const testProps = {
-  myProducts: ['GUNMETAL SANDSTONE', 'HUSTLE'],
-  user: 'Josh',
+  myProducts: List([Map({ id: 1, name: 'Ball', image: 'image' })]),
   quantity: 5,
   total: 10,
   values: 7,
@@ -35,7 +34,6 @@ describe('Given a ConfirmationContainer enhancer', () => {
       const ConfirmationContainer = enhance(
         createSink(props => (providedProps = props))
       );
-
       mount(
         <MemoryRouter>
           <Provider store={testStore}>
@@ -49,16 +47,11 @@ describe('Given a ConfirmationContainer enhancer', () => {
       expect(providedProps.myProducts).toEqual(
         getCartProducts(testStore.getState()).toJS(),
       );
-      expect(providedProps.user).toEqual(getUser(testStore.getState()).toJS());
 
       expect(providedProps.quantity).toEqual(
         getQuantity(testStore.getState()).toJS(),
       );
       expect(providedProps.total).toEqual(getTotal(testStore.getState()));
-
-      expect(providedProps.values).toEqual(
-        getFormValues(testStore.getState()).toJS(),
-      );
     });
   });
 });

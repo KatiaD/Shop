@@ -12,4 +12,5 @@ const getTotal = createSelector(
   0),
 );
 
+
 export default getTotal;

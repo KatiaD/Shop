@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given the ProductItem component when the component is rendered should render the component with provided props 1`] = `
+<ProductItemstyled__ProductContainer
+  data-name="GUNMETAL SANDSTONE"
+>
+  <img
+    alt=""
+    src=""
+  />
+  <ProductItemstyled__ProductName>
+    GUNMETAL SANDSTONE
+  </ProductItemstyled__ProductName>
+  <ProductItemstyled__ProductPriceBlock>
+    <ProductItemstyled__ProductPrice>
+      140
+       
+      $
+    </ProductItemstyled__ProductPrice>
+    <Button
+      accent={true}
+      onClick={[MockFunction]}
+    >
+      Buy
+    </Button>
+  </ProductItemstyled__ProductPriceBlock>
+</ProductItemstyled__ProductContainer>
+`;

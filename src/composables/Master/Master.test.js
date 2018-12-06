@@ -3,22 +3,22 @@ import { shallow } from 'enzyme';
 
 import Master from './Master';
 
-const testProps = { children: '', total: 50, title: 'title' },
+const testProps = { children: '', total: 500, title: 'test' };
 
-describe('Given the Master component', () => {
-	describe( 'when the component is rendered', () => {
-		let component;
+describe('Given a Master component', () => {
+  describe('when the component is rendered', () => {
+    let component;
 
-		beforeEach(() => {
-			component = shallow(
-				<Master { ...testProps }>
-					<div>Page</div>
-				</Master>
-			);
-		});
+    beforeEach(() => {
+      component = shallow(
+        <Master {...testProps}>
+          <div>Page</div>
+        </Master>,
+      );
+    });
 
-		it('should match the snapshot', () => {
-			expect(component).toMatchSnapshot();
+    it('should match the snapshot', () => {
+      expect(component).toMatchSnapshot();
     });
   });
 });

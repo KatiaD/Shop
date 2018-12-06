@@ -7,7 +7,7 @@ import { CartItem } from 'components/widgets';
 import { CartTable } from './Cart.styled';
 
 
-const displayName = 'Category';
+const displayName = 'Cart';
 
 const propTypes = {
   myProducts: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
@@ -15,7 +15,6 @@ const propTypes = {
   handlePlusItem: PropTypes.func.isRequired,
   handleMinusItem: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
-  handleSetUser: PropTypes.func.isRequired,
   user: PropTypes.shape({ name: PropTypes.string, address: PropTypes.string }),
   quantity: PropTypes.objectOf(PropTypes.number),
 };
@@ -34,7 +33,7 @@ function Cart({
   quantity,
 }) {
   return (
-    <Master title="Cart">
+    <Master title="Cart" total={total}>
       {total ? (
         <CartTable>
           <thead>

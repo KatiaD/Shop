@@ -16,6 +16,7 @@ const validate = values => {
       errors.email = 'Invalid email address'
     }
   }
+
   if (values.age) {
     if (isNaN(Number(values.age))) {
       errors.age = 'Must be a number'
@@ -23,6 +24,7 @@ const validate = values => {
   }  else if (Number(values.age) < 18) {
     errors.age = 'Sorry, you must be at least 18 years old'
   }
+
   return errors
 }
 
@@ -42,7 +44,6 @@ const renderField = ({
 }) => (
   <div>
     <div>
-    {console.log("IMMUTABLE INPUT", input)}
       <Input {...input} required placeholder={placeholder} type={type} />
       {touched &&
         ((error && <span>{error}</span>) ||
@@ -80,5 +81,5 @@ export default reduxForm({
   validate, // <--- validation function given to redux-form
   destroyOnUnmount: false,
 
-  warn // <--- warning function given to redux-form
-})(SyncValidationForm)
+  warn, // <--- warning function given to redux-form
+})(SyncValidationForm);
