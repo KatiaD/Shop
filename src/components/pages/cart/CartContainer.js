@@ -4,9 +4,9 @@ import {
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router';
+
 import { plusItem, minusItem, addUser } from 'actions';
 import { getCartProducts, getTotal, getUser } from 'selectors';
-
 import Cart from './Cart';
 import getQuantity from '../../../selectors/getQuantity';
 
